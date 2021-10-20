@@ -1,0 +1,20 @@
+function preload(){
+
+}
+function setup(){
+canvas=createCanvas(640,450);
+canvas.position(110,250);//to position the canvas on the screen
+video=createCapture(VIDEO);//to access the webcam
+video.hide();
+tint_color="";
+}
+function draw(){
+    image(video,0,0,640,450);
+    tint(tint_color);
+}
+function take_snapshot(){
+    save('student_name.png');
+}
+function Filter_tint(){
+    tint_color=document.getElementById("color_name").value;
+}
